@@ -21,7 +21,7 @@ static bool is24h;
 		{
 			[dateFormatter setDateFormat:@"HH:mm"];
 		}else{
-			[dateFormatter setDateFormat:@"hh:mm a"];
+			[dateFormatter setDateFormat:@"h:mm a"];
 		}
 		dateLabel.text = [dateFormatter stringFromDate:date];
 		[dateLabel sizeToFit];		
