@@ -1,0 +1,10 @@
+{
+    entry = {
+	bundle = ExactTimeprefs;
+	cell = PSLinkCell;
+	detail = ExactTimeprefsListController;
+	icon = ExactTime.png;
+	isController = 1;
+	label = ExactTime;
+    };
+}

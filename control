@@ -1,7 +1,7 @@
 Package: com.gilshahar7.exacttime
 Name: ExactTime
 Depends: mobilesubstrate
-Version: 1.0
+Version: 1.3
 Architecture: iphoneos-arm
 Description: Shows the exact time of a notification.
 Maintainer: gilshahar7
