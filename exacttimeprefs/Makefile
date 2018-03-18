@@ -1,5 +1,5 @@
-export ARCHS = armv7 arm64
-export TARGET = iphone:clang:9.1:9.1
+ARCHS = armv7 arm64
+
 include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = ExactTimeprefs
