@@ -1,9 +1,9 @@
-ARCHS = armv7 arm64
-
+ARCHS = armv7 arm64 arm64e
+export TARGET = iphone:clang:11.2:7.0
 include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = ExactTimeprefs
-ExactTimeprefs_FILES = RootListController.m
+ExactTimeprefs_FILES = ExactTimeprefs.mm
 ExactTimeprefs_INSTALL_PATH = /Library/PreferenceBundles
 ExactTimeprefs_FRAMEWORKS = UIKit
 ExactTimeprefs_PRIVATE_FRAMEWORKS = Preferences
