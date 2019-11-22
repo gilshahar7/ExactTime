@@ -7,7 +7,7 @@
 @interface NCLookHeaderContentView
 -(void)_updateDateLabelFontForShortLook;
 @end
-//IOS 11 & 12
+//IOS 11 & 12 And Above
 @interface BSUIRelativeDateLabel
 @property (assign,nonatomic) NSString *text;
 -(void)sizeToFit;
@@ -16,7 +16,7 @@
 @interface MTPlatterHeaderContentView
 -(void)_updateTextAttributesForDateLabel;
 @end
-//IOS 12
+//IOS 12 And Above
 @interface PLPlatterHeaderContentView
 -(void)_updateTextAttributesForDateLabel;
 @end
@@ -152,7 +152,7 @@ static NSString *settingsPath = @"/var/mobile/Library/Preferences/com.gilshahar7
     %end
 %end
 
-%group iOS12
+%group iOS12AndAbove
     %hook PLPlatterHeaderContentView
     -(void)_updateTextAttributesForDateLabel{
         %orig;
@@ -229,7 +229,7 @@ static NSString *settingsPath = @"/var/mobile/Library/Preferences/com.gilshahar7
         %init(iOS10);
     } else if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.0 && [[[UIDevice currentDevice] systemVersion] floatValue] < 12.0) {
         %init(iOS11);
-    }else if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 12.0 && [[[UIDevice currentDevice] systemVersion] floatValue] < 13.0) {
-        %init(iOS12);
+    }else if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 12.0) {
+        %init(iOS12AndAbove);
     }
 }
