@@ -37,7 +37,12 @@ static NSString *settingsPath = @"/var/mobile/Library/Preferences/com.gilshahar7
         if((date != nil) && (format == 1)){
             NCNotificationDateLabel *dateLabel = MSHookIvar<NCNotificationDateLabel *>(self, "_dateLabel");
             int timeSinceNow = (int)[date timeIntervalSinceNow];
-            timeSinceNow = timeSinceNow*-1;
+            bool isFuture = false;
+            if (timeSinceNow > 0){
+              isFuture = true;
+            }else{
+              timeSinceNow = timeSinceNow*-1;
+            }
             bool addMinutes =  [[prefs objectForKey:@"addMinutes"] boolValue];
             bool addToCurrent =  [[prefs objectForKey:@"addToCurrent"] boolValue];
             int hours = timeSinceNow / 3600;
@@ -46,23 +51,43 @@ static NSString *settingsPath = @"/var/mobile/Library/Preferences/com.gilshahar7
                 if(hours == 0){
                     if(minutes == 0){
                     }else{
+                      if(isFuture){
+                        dateLabel.text = [NSString stringWithFormat:@"in %im", minutes];
+                      }else{
                         dateLabel.text = [NSString stringWithFormat:@"%im ago", minutes];
+                      }
                     }
                 }else{
                     if(minutes == 0){
+                      if(isFuture){
+                        dateLabel.text = [NSString stringWithFormat:@"in %ih", hours];
+                      }else{
                         dateLabel.text = [NSString stringWithFormat:@"%ih ago", hours];
+                      }
                     } else{
+                      if(isFuture){
+                        dateLabel.text = [NSString stringWithFormat:@"in %ih %im", hours, minutes];
+                      }else{
                         dateLabel.text = [NSString stringWithFormat:@"%ih %im ago", hours, minutes];
+                      }
                     }
                 }
             }else if(addToCurrent){
                 if(hours == 0){
                     if(minutes == 0){
                     }else{
+                      if(isFuture){
+                        dateLabel.text = [NSString stringWithFormat:@"in %im", minutes];
+                      }else{
                         dateLabel.text = [NSString stringWithFormat:@"%im ago", minutes];
+                      }
                     }
                 }else{
+                  if(isFuture){
+                    dateLabel.text = [NSString stringWithFormat:@"in %ih", hours];
+                  }else{
                     dateLabel.text = [NSString stringWithFormat:@"%ih ago", hours];
+                  }
                 }
             }
             if((timeSinceNow/60) >= affectTime){
@@ -100,7 +125,12 @@ static NSString *settingsPath = @"/var/mobile/Library/Preferences/com.gilshahar7
         if((date != nil) && (format == 1)){
             BSUIRelativeDateLabel *dateLabel = MSHookIvar<BSUIRelativeDateLabel *>(self, "_dateLabel");
             int timeSinceNow = (int)[date timeIntervalSinceNow];
-            timeSinceNow = timeSinceNow*-1;
+            bool isFuture = false;
+            if (timeSinceNow > 0){
+              isFuture = true;
+            }else{
+              timeSinceNow = timeSinceNow*-1;
+            }
             bool addMinutes =  [[prefs objectForKey:@"addMinutes"] boolValue];
             bool addToCurrent =  [[prefs objectForKey:@"addToCurrent"] boolValue];
             int hours = timeSinceNow / 3600;
@@ -109,23 +139,43 @@ static NSString *settingsPath = @"/var/mobile/Library/Preferences/com.gilshahar7
                 if(hours == 0){
                     if(minutes == 0){
                     }else{
+                      if(isFuture){
+                        dateLabel.text = [NSString stringWithFormat:@"in %im", minutes];
+                      }else{
                         dateLabel.text = [NSString stringWithFormat:@"%im ago", minutes];
+                      }
                     }
                 }else{
                     if(minutes == 0){
+                      if(isFuture){
+                        dateLabel.text = [NSString stringWithFormat:@"in %ih", hours];
+                      }else{
                         dateLabel.text = [NSString stringWithFormat:@"%ih ago", hours];
+                      }
                     } else{
+                      if(isFuture){
+                        dateLabel.text = [NSString stringWithFormat:@"in %ih %im", hours, minutes];
+                      }else{
                         dateLabel.text = [NSString stringWithFormat:@"%ih %im ago", hours, minutes];
+                      }
                     }
                 }
             }else if(addToCurrent){
                 if(hours == 0){
                     if(minutes == 0){
                     }else{
+                      if(isFuture){
+                        dateLabel.text = [NSString stringWithFormat:@"in %im", minutes];
+                      }else{
                         dateLabel.text = [NSString stringWithFormat:@"%im ago", minutes];
+                      }
                     }
                 }else{
+                  if(isFuture){
+                    dateLabel.text = [NSString stringWithFormat:@"in %ih", hours];
+                  }else{
                     dateLabel.text = [NSString stringWithFormat:@"%ih ago", hours];
+                  }
                 }
             }
             if((timeSinceNow/60) >= affectTime){
@@ -163,7 +213,12 @@ static NSString *settingsPath = @"/var/mobile/Library/Preferences/com.gilshahar7
         if((date != nil) && (format == 1)){
             BSUIRelativeDateLabel *dateLabel = MSHookIvar<BSUIRelativeDateLabel *>(self, "_dateLabel");
             int timeSinceNow = (int)[date timeIntervalSinceNow];
-            timeSinceNow = timeSinceNow*-1;
+            bool isFuture = false;
+            if (timeSinceNow > 0){
+              isFuture = true;
+            }else{
+              timeSinceNow = timeSinceNow*-1;
+            }
             bool addMinutes =  [[prefs objectForKey:@"addMinutes"] boolValue];
             bool addToCurrent =  [[prefs objectForKey:@"addToCurrent"] boolValue];
             int hours = timeSinceNow / 3600;
@@ -172,23 +227,43 @@ static NSString *settingsPath = @"/var/mobile/Library/Preferences/com.gilshahar7
                 if(hours == 0){
                     if(minutes == 0){
                     }else{
+                      if(isFuture){
+                        dateLabel.text = [NSString stringWithFormat:@"in %im", minutes];
+                      }else{
                         dateLabel.text = [NSString stringWithFormat:@"%im ago", minutes];
+                      }
                     }
                 }else{
                     if(minutes == 0){
+                      if(isFuture){
+                        dateLabel.text = [NSString stringWithFormat:@"in %ih", hours];
+                      }else{
                         dateLabel.text = [NSString stringWithFormat:@"%ih ago", hours];
+                      }
                     } else{
+                      if(isFuture){
+                        dateLabel.text = [NSString stringWithFormat:@"in %ih %im", hours, minutes];
+                      }else{
                         dateLabel.text = [NSString stringWithFormat:@"%ih %im ago", hours, minutes];
+                      }
                     }
                 }
             }else if(addToCurrent){
                 if(hours == 0){
                     if(minutes == 0){
                     }else{
+                      if(isFuture){
+                        dateLabel.text = [NSString stringWithFormat:@"in %im", minutes];
+                      }else{
                         dateLabel.text = [NSString stringWithFormat:@"%im ago", minutes];
+                      }
                     }
                 }else{
+                  if(isFuture){
+                    dateLabel.text = [NSString stringWithFormat:@"in %ih", hours];
+                  }else{
                     dateLabel.text = [NSString stringWithFormat:@"%ih ago", hours];
+                  }
                 }
             }
             if((timeSinceNow/60) >= affectTime){
