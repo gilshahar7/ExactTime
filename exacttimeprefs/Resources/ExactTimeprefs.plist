@@ -7,8 +7,70 @@
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Choose extentions</string>
+			<key>footerText</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.gilshahar7.exacttimeprefs</string>
+			<key>key</key>
+			<string>notifications</string>
+			<key>label</key>
+			<string>Notifications</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.gilshahar7.exacttimeprefs</string>
+			<key>key</key>
+			<string>messages</string>
+			<key>label</key>
+			<string>Messages</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.gilshahar7.exacttimeprefs</string>
+			<key>key</key>
+			<string>phone</string>
+			<key>label</key>
+			<string>Phone</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.gilshahar7.exacttimeprefs</string>
+			<key>key</key>
+			<string>mail</string>
+			<key>label</key>
+			<string>Mail</string>
+			<key>id</key>
+			<string>95</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Notifications settings</string>
 			<key>footerText</key>
 			<string>Only show the exact time for notifications older than this value (0~240). Default value for stock iOS is 240 minutes (4 hours)</string>
+			<key>id</key>
+			<string>96</string>
 		</dict>
 			<dict>
 			<key>cell</key>
@@ -23,21 +85,28 @@
 			<true/>
 			<key>label</key>
 			<string>Affect after (in minutes)</string>
+			<key>id</key>
+			<string>97</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSButtonCell</string>
-			<key>defaults</key>			<string>com.gilshahar7.exacttimeprefs</string>
+			<key>defaults</key>
+			<string>com.gilshahar7.exacttimeprefs</string>
 			<key>label</key>
 			<string>Apply</string>
 			<key>action</key>
 			<string>apply</string>
+			<key>id</key>
+			<string>98</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
 			<string>This will add "Xh ago" where there is an exact time, separated by a ' • ' Note: this will override any language</string>
+			<key>id</key>
+			<string>99</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -50,12 +119,16 @@
 			<string>addToCurrent</string>
 			<key>label</key>
 			<string>Add estimated time to exact time</string>
+			<key>id</key>
+			<string>100</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
 			<string>This will add minutes to all "Xh ago" Note: this will override any language</string>
+			<key>id</key>
+			<string>101</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -68,12 +141,66 @@
 			<string>addMinutes</string>
 			<key>label</key>
 			<string>Change "2h ago" to "2h 17m ago"</string>
+			<key>id</key>
+			<string>102</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>About</string>
 			<key>footerText</key>
-			<string>Made by: gilshahar7.</string>
+			<string>Made by gilshahar7</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>reddit</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>icon</key>
+			<string>Reddit</string>
+			<key>label</key>
+			<string>Reddit (u/gilshahar7)</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>sendEmail</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>icon</key>
+			<string>Email</string>
+			<key>label</key>
+			<string>Email</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>openTwitter</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>icon</key>
+			<string>Twitter</string>
+			<key>label</key>
+			<string>Twitter (@gilshahar7)</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>sourceLink</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>icon</key>
+			<string>GitHub</string>
+			<key>label</key>
+			<string>Source Code</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>donationLink</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>icon</key>
+			<string>Donate</string>
+			<key>label</key>
+			<string>Donate</string>
 		</dict>
 	</array>
 	<key>title</key>
