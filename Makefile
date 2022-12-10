@@ -2,7 +2,7 @@ ARCHS = armv7 arm64 arm64e
 export TARGET = iphone:clang:11.2:7.0
 include $(THEOS)/makefiles/common.mk
 
-DEBUG=0 
+FINALPACKAGE=1
 
 TWEAK_NAME = ExactTime ExactTimeMail ExactTimePhone ExactTimeMessages
 ExactTime_FILES = ExactTime.xm

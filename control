@@ -2,7 +2,7 @@ Package: com.gilshahar7.exacttime
 Name: ExactTime
 Depends: mobilesubstrate
 Conflicts: com.gilshahar7.exacttimemail, com.gilshahar7.exacttimephone, com.gilshahar7.exacttimemessages
-Version: 2.0
+Version: 2.0.1
 Architecture: iphoneos-arm
 Description: Shows the exact time of notifications, messages, calls and emails.
 Maintainer: gilshahar7
